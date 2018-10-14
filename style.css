@@ -1,0 +1,104 @@
+:root {
+  --bgcolor: #eee;
+  --headerheight: 10em;
+  --heroheight: 20em;
+  --articleheight: 15em;
+  --contactheight: 15em;
+}
+
+html, body {
+  padding: 0px;
+  scroll-behavior: smooth;
+  font-family: 'helvetica';
+}
+
+.grid {
+  width: 90%;
+  border: solid 0.2em lightblue;
+  padding: 0.5em;
+  margin: auto;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-row-gap: 0.5em;
+  grid-template-areas: 
+    "header header"
+    "menu menu"
+    "hero hero"
+    "content1 content2"
+    "contact contact"
+    "footer footer";
+}
+
+.header {
+  grid-area: header;
+  color: white;
+  text-align: center;
+  line-height: var(--headerheight);
+  background-color: teal;
+  height: var(--headerheight);
+  padding: 1em;
+}
+
+.hero-image {
+  grid-area: hero;
+  text-align: center;
+  background-color: var(--bgcolor);
+  height: var(--heroheight);
+  line-height: var(--heroheight);
+  padding: 1em;
+}
+
+.column-1 {
+  grid-area: content2;
+  color: white;
+  text-align: center;
+  height: var(--articleheight);
+  line-height: var(--articleheight);
+  background-color: #888;
+  padding: 1em;
+}
+
+.column-2 {
+  grid-area: content1;
+  color: white;
+  height: var(--articleheight);
+  line-height: var(--articleheight);
+  text-align: center;
+  background-color: #777;
+  padding: 1em;
+}
+
+.contact {
+  grid-area: contact;
+  text-align: center;
+  height: var(--contactheight);
+  line-height: var(--contactheight);
+  background-color: var(--bgcolor);
+  padding: 1em;
+}
+
+.footer {
+  grid-area: footer;
+  text-align: center;
+  background-color: var(--bgcolor);
+  padding: 1em;
+}
+
+.menu {
+  display: grid;
+  grid-area: menu;
+  grid-column-gap: 0.5em;
+  grid-template-columns: repeat(5,1fr);
+}
+
+.menu-item {
+  text-align: center;
+  color: white;
+  background-color: #777;
+  padding: 1em;
+}
+
+.menu-item:hover {
+  color: #111;
+  background-color: #999;
+}
