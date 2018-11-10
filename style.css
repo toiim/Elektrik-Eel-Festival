@@ -20,14 +20,37 @@ html, body {
   height: 80vh;
   min-height: 30em;
   background-color: var(--secondary-color);
+  background-image: url(images/logo.svg);
+  background-position: center center;
+  background-repeat: no-repeat;
 }
 
 .logo {
   overflow: hidden;
+  display: flex;
 }
 
 .logo img {
   width: 100%;
+  max-width: 50em;
+  /*margin: -5%;*/
+}
+
+.buy-tickets {
+  padding: 0.5em;
+  background-color: black;
+  width: 14em;
+  color: white;
+  border: 0.3em solid white;
+  border-radius: 1em;
+  margin-top: calc(80vh - 3em);
+  margin-left: auto;
+  margin-right: auto;
+  z-index: 2;
+}
+
+.buy-tickets:hover {
+  background-color: var(--secondary-color);
 }
 
 nav {
@@ -52,6 +75,17 @@ ul{
   text-align: center;
 }
 
+a {
+  color: white;
+  text-decoration: none;
+}
+
+a:hover {
+  color: #999;
+  transition: color 0.1s;
+  text-decoration: none;
+}
+
 li {
   list-style: none;
   display: inline;
@@ -63,7 +97,7 @@ nav li {
 
 nav li:hover {
   transition: font-size 0.2s;
-  font-size: 1.1em;
+  text-decoration: underline;
 }
 
 /*
@@ -75,7 +109,9 @@ nav li:hover {
   content: "\0020\2027\0020"
 }
 
+*/
 
+/* Creates bullets between items & limits the number of rows to 4 */
 .lineup-list li:not(:first-child):before {
   content:  " \B7  ";
 }
@@ -83,13 +119,29 @@ nav li:hover {
 .lineup-list li:nth-child(4n):before {
   content: "\A";
   white-space: pre;
-  color: red;
+}
+
+/* fixes shrinking issue caused by above code*/
+
+.lineup-sec {
+  width: 100%;
+  padding: 4em 0 25em 0;
+  background-image: url(images/audience-concert-crowd-1387174.jpg);
+  background-position: center bottom;
+  background-repeat: no-repeat;
+  /*filter: grayscale(100%);*/
+  background-size: 100%;
+}
+
+.lineup-sec li {
+  text-shadow: #000 0px 2px 5px;
 }
 
 .main-container {
+  min-width: vw;
   padding: 1.5em;
 }
-*/
+
 .icons {
   /*font-size: 1.1em;*/
   width: 20%;
@@ -109,4 +161,20 @@ i:hover {
 
 .band-sec h2::after {
   content: "\0020\2027\2027";
+}
+
+.popular {
+  font-size: 1.5em;
+}
+
+.colored-background {
+  padding: 1em 7em 1em 7em;
+  background-color: var(--secondary-color)
+}
+
+.spotify {
+  height: 30em;
+  background-image: url(images/sergio-ruiz-589221-unsplash.jpg);
+  background-position: center center;
+  background-size: 100%;
 }
