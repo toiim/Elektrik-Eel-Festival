@@ -1,4 +1,4 @@
-/* Setting up variables */
+/* Setting up variables and main container*/
 
 :root {
   --bgcolor: #000;
@@ -17,6 +17,12 @@ html, body {
   text-align: center;
 }
 
+.main-container {
+  min-width: vw;
+  padding: 1.5em;
+}
+
+/* Navigation Section */
 
 nav {
   position: fixed;
@@ -65,6 +71,8 @@ nav li:hover {
   text-decoration: underline;
 }
 
+/* The header and Buy Tickets Button */
+
 .header {
   height: 80vh;
   min-height: 30em;
@@ -82,7 +90,6 @@ nav li:hover {
 .logo img {
   width: 100%;
   max-width: 50em;
-  /*margin: -5%;*/
 }
 
 .buy-tickets {
@@ -102,19 +109,10 @@ nav li:hover {
   background-color: var(--secondary-color);
 }
 
+/* Lineup Section */
 
-/*
-.lineup-list li:nth-of-type(1n+2) {
-  margin-left: 0.5em;
-}
+/* Creates bullets between items in the lineup & limits the number of rows to 4 */
 
-.lineup-list li:not(:last-child):after {
-  content: "\0020\2027\0020"
-}
-
-*/
-
-/* Creates bullets between items & limits the number of rows to 4 */
 .lineup-list li:not(:first-child):before {
   content:  " \B7  ";
 }
@@ -124,15 +122,12 @@ nav li:hover {
   white-space: pre;
 }
 
-/* fixes shrinking issue caused by above code*/
-
 .lineup-sec {
   width: 100%;
   padding: 4em 0 25em 0;
   background-image: url(images/audience-concert-crowd-1387174.jpg);
   background-position: center bottom;
   background-repeat: no-repeat;
-  /*filter: grayscale(100%);*/
   background-size: 100%;
 }
 
@@ -140,23 +135,12 @@ nav li:hover {
   text-shadow: #000 0px 2px 5px;
 }
 
-.main-container {
-  min-width: vw;
-  padding: 1.5em;
-}
-
 .icons {
-  /*font-size: 1.1em;*/
   width: 20%;
   justify-content: space-between;
   display: flex;
 }
-/*
-i:hover {
-  transition: font-size 0.2s;
-  font-size: 1.2em;
-}
-*/
+
 
 .band-sec h2::before {
   content: "\2027\2027\0020";
@@ -176,6 +160,8 @@ i:hover {
   background-color: var(--secondary-color)
 }
 
+/* Spotify and Recommended Sections */
+
 .spotify {
   background-image: url(images/sergio-ruiz-589221-unsplash.jpg);
   background-position: center center;
@@ -187,7 +173,6 @@ input {
   font-family: inherit;
   font-size: inherit;
 }
-
 
 .button-text {
   width: 30em;
@@ -208,6 +193,8 @@ input {
   border: 0.3em solid white;
   border-radius: 1em;
 }
+
+/* Final two sponsor and footer sections */
 
 .sponsor {
   display: flex;
