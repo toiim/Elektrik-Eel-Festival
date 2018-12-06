@@ -2,14 +2,20 @@
 <html>
 
   <head>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="stylesheet" type="text/css" href="style.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
     <link rel="shortcut icon" type="image/x-icon" href="favicon.png"/>
+    <script src="js/jquery-3.3.1.min.js"></script>
+    <script src="js/myscripts.js"></script>
     <title>Elektrik Eel Festival</title>
   </head>
 
   <body>
     <nav>
+      <div class="responsive-menu">
+        <div class="switch"><i class="fas fa-bars"></i></div>
+      </div>
       <ul>
         <a href="#"><li>Buy Tickets</li></a>
         <a href="#1"><li>The Lineup</li></a>
@@ -25,9 +31,8 @@
       </ul>
     </nav>
     <div class="header">
-      <div class="logo">
-      </div>
-      <a href="#"><div class="buy-tickets"><h2>Buy Tickets</h2></div></a>
+      <div class="logo"></div>
+      <div class="buy-tickets"><a href="#"><h2>Buy Tickets</h2></a></div>
     </div>
     <div class="main-container">
       <div class="lineup-sec" id="1">
