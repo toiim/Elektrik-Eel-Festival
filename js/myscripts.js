@@ -3,9 +3,9 @@ $(document).ready(function(){
     $('nav').ready(function(){
       menuSlide(); // basically when the nav item is loaded, it calls the function menuSlide
     });
-    $('.switch').click(function()
+    $('.responsive-menu').click(function() // I had initially set it to trigger from the '.switch' class but it seemed easier to hit the whole thing on a phone
     {
-      $('nav ul').css({display:'block'});
+      $('nav ul').slideToggle('active');
     });
   });
 
